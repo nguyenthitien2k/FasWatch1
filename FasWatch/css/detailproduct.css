@@ -1,0 +1,309 @@
+﻿#divmain {
+    
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    text-align: justify;
+}
+
+body {
+    background-color: beige;
+    font-family:Arial;
+}
+.tableright td {
+    width: 100px;
+}
+.showmore {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border: 0.5px solid yellow;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    margin-left: 45%
+}
+
+    .showmore:hover {
+        opacity: 0.5;
+        color: yellow;
+    }
+
+.h1 {
+    text-align: center;
+}
+
+.img1 {
+    width: 500px;
+    height: 500px;
+}
+
+h2 {
+    text-align: left;
+}
+
+p {
+    text-align: justify;
+    color: #262323;
+}
+
+
+#muangay {
+    
+    height: 50px;
+    width: 200px;
+    background-color: #FED101;
+    cursor:pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius:7px;
+    
+}
+    #muangay:hover {
+        background-color: #eda600;
+    }
+    #reason {
+        width: 40%;
+    }
+#reason i {
+    color: firebrick;
+}
+#hrmau {
+    border: none;
+    background-color: #FED101;
+    height: 1.5px;
+    width: 200px;
+}
+#addCart {
+    padding-top: 15px;
+    cursor: pointer;
+    height: 50px;
+    text-align: center;
+    width: 200px;
+    color: #FED101;
+    border: 1px solid #FED101;
+    background-color: white;
+    border-radius: 7px;
+    
+}
+    #addCart:hover {
+        background-color: floralwhite;
+        opacity: 0.8;
+    }
+    .span {
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+.table {
+    width: 80%;
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+
+.Imgsao {
+    display: block;
+    float: left;
+}
+
+.img {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    float: left;
+}
+
+.imglienquan {
+    width: 250px;
+    height: 250px;
+    display: inline-block;
+    float: left;
+}
+
+
+/*
+div button, img{
+    height:32px;
+    width:32px;
+}
+*/
+.motasp2 {
+    margin-top: 80px;
+    color: red;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tablemota {
+    vertical-align:middle;
+    width: 80%;
+    margin-left:10%;
+    /*
+    margin-left: auto;
+    margin-right: auto;
+    */
+    border: 1px solid gray;
+    background-color:beige;
+}
+    
+    .tablemota tr:nth-child(2n+1) {
+        background-color:aliceblue;
+    }
+
+    .tablemota tr:nth-child(2n) {
+        background-color:white;
+    }
+    .tablemota tr:hover {
+        background-color:lightblue;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+
+
+
+
+
+.pmota {
+    margin-left: 20px;
+    margin-right: 20px;
+    align-content: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: justify;
+}
+* {
+    box-sizing: border-box
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    background-color:black;
+    opacity:0.6;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+        background-color: white;
+    }
+
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+#related {
+    
+    text-align: center;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+/*css phần bảo hành*/
+    
+.baohanh {
+   margin-top:40px;
+    width: 80%;
+    text-align:center;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+div ul{
+    font-style:italic;
+    font-size:18px;
+    text-align:justify;
+}
+    div ul li {
+        
+        margin-left: 20px;
+        margin-right: 20px;
+        align-content: center;
+        margin-top: 20px;
+        
+        font-size: 15px;
+        text-align: justify;
+    }

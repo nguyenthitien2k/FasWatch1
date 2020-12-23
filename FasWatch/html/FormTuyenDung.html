@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="../css/thanhtoan.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   
+    <style type="text/css">
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            font-size: 20px;
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%; /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: red;
+                opacity:0.5;
+                text-decoration: none;
+                cursor: pointer;
+            }
+    </style>
+
+</head>
+<body>
+    <table border="0" align="center">
+        <caption>FORM TUYỂN DỤNG  </caption>
+        <tr>
+            <td>
+                <div class="row">
+                    <div class="col-75">
+                        <div class="container">
+
+
+                            <div class="row">
+                                <div class="col-50">
+
+                                    <label for="name"><i class="fa fa-user"></i> Họ và tên</label>
+                                    <input type="text" id="name" name="name" placeholder="John M. Doe">
+                                    <label for="phone"><i class="fa fa-phone"></i> SĐT</label>
+                                    <input type="text" id="phone" name="phone" placeholder="(056)333333">
+                                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                    <input type="text" id="email" name="email" placeholder="john@example.com">
+                                    <label for="adr"><i class="fa fa-address-card-o"></i> Địa chỉ</label>
+                                    <input type="text" id="adr" name="address" placeholder="542 Chu Văn An">
+                                    <label for="state">Vị trí ứng tuyển</label>
+
+                                    <select style=" width: 100%; margin-bottom: 20px; padding: 12px; border: 1px solid #ccc; border-radius: 3px;">
+                                        <option>TRƯỞNG CA SHOWROOM TUYỂN DỤNG</option>
+                                        <option>CHUYÊN VIÊN KỸ THUẬT ĐỒNG HỖ</option>
+                                        <option>TIẾP ĐÓN KHÁCH HÀNG (BẢO VỆ)</option>
+                                        <option>TELESALE</option>
+                                        <option>NHÂN VIÊN CHĂM SÓC KHÁCH HÀNG</option>
+                                        <option>TƯ VẤN BÁN HÀNG</option>
+                                    </select>
+
+
+
+                                </div>
+                                <div id="myModal" class="modal">
+
+                                    <!-- Modal content -->
+                                    <div class="modal-content">
+                                        <span class="close">&times;</span>
+                                        <p>
+                                            Cảm ơn bạn đã quan tâm đến công việc này! Chúng tôi sẽ liên lạc sớm với bạn!
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <input id="send" type="button" value="Hãy liên hệ với tôi"  class="btn">
+
+                        </div>
+                    </div>
+
+                </div>
+            </td>
+        </tr>
+
+    </table>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var send = document.getElementById("send");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        send.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

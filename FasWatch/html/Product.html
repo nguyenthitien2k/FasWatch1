@@ -1,0 +1,200 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/product.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body onload="loadPage();loadSelect()">
+    <div>
+        <table style="width:100%;">
+            <tr>
+                <td rowspan="2" style="width:200px; vertical-align:top;padding-left:20px">
+                    <div>
+                        <h3>Lọc theo</h3>
+                        <div class="sel">
+                            <select name="brand" id="brand" onchange="brandChanged(this)">
+                                <option disabled selected>Thương hiệu</option>
+
+                            </select>
+                        </div>
+                        <div class="sel">
+                            <select name="price" id="price" onchange="priceChanged(this)">
+                                <option disabled selected>Giá</option>
+                                <option value="Dưới 5 triệu">Dưới 5 triệu</option>
+                                <option value="5 - 10 triệu">5 - 10 triệu</option>
+                                <option value="10 - 20 triệu">10 - 20 triệu</option>
+                                <option value="Trên 20 triệu">Trên 20 triệu</option>
+                            </select>
+                        </div>
+                        <div class="sel">
+                            <select name="sex" id="sex" onchange="sexChanged(this)">
+                                <option disabled selected>Giới tính</option>
+                                <option value="Nam">Nam</option>
+                                <option value="Nữ">Nữ</option>
+                            </select>
+                        </div>
+                        <div class="sel">
+                            <select name="material" id="material" onchange="materialChanged(this)">
+                                <option disabled selected>Chất liệu dây</option>
+
+
+                            </select>
+                        </div>
+
+                        <div class="sel">
+                            <select name="size" id="size" onchange="sizeChanged(this)">
+                                <option disabled selected>Kích thước mặt số</option>
+                                <option value="Dưới 30mm">Dưới 30mm</option>
+                                <option value="30 - 40 mm">30 - 40 mm</option>
+                                <option value="Trên 40mm">Trên 40mm</option>
+                            </select>
+                        </div>
+
+                        <div class="sel">
+                            <select name="color" id="color" onchange="colorChanged(this)">
+                                <option disabled selected>Màu mặt số</option>
+
+                            </select>
+                        </div>
+                        <div class="sel">
+                            <select name="engine" id="engine" onchange="powerChanged(this)">
+                                <option disabled selected>Bộ máy - Năng lượng</option>
+
+
+                            </select>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div style="display:flex; height:30px">
+                        <label id="labelthuonghieu"></label>
+                        <i id="delete_icon" class="fas fa-times" onclick="DeleteFilter()"></i>
+                    </div>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <div id="btnContainer" style="display:flex">
+                            <button class="btn" id="btnListView" onclick="btnSee()"><i class="fa fa-bars"></i> List</button>
+                            <button class="btn active" id="btnGridView" onclick="btnSee()"><i class="fa fa-th-large"></i> Grid</button>
+                            <div id="splitpage">
+
+                                <i class="fas fa-angle-double-left" onclick="firstpage()"></i>
+                                <i class="fas fa-angle-left " onclick="previouspage()"></i>
+                                <button id="pagenumber">1</button>
+                                <i class="fas fa-angle-right" onclick="nextpage()"></i>
+                                <i class="fas fa-angle-double-right" onclick="lastpage()"></i>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div id="product">
+                        </div>
+
+
+                        <div id="myModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <table>
+                                    <tr>
+                                        <td width="50%">
+                                            <img width="300" src="Products/SGEH83P1.png">
+                                        </td>
+                                        <td>
+                                            <table>
+                                                <tr colspan="2">
+                                                    <td>
+                                                        <p>SEIKO SGEH73P1 – NAM – KÍNH SAPPHIRE – QUARTZ (PIN) – DÂY KIM LOẠI</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p>Giá:</p>
+                                                    </td>
+                                                    <td>
+                                                        <p id="price" style="font-size: larger">4.720.000</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Số lượng:</td>
+                                                    <td><input name="quantity" type="number" min="1" max="10" step="1" value="1" /td>
+                                                </tr>
+                                                <tr colspan="2">
+                                                    <td><button>Add to Cart</button></td>
+                                                </tr>
+                                                <tr colspan="2">
+                                                    <td><a href="#">Xem chi tiết</a></td>
+                                                </tr>
+
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <div style="background-color:black;color:white;width:100%">
+        <div style="background-color: black;width:90%;margin-left:6%; display:flex; color:white">
+            <div class="col-20" style="width:30%;margin:25px;">
+                <h4> © 2017 Cửa hàng Đồng hồ Thời Trang FasWatch</h4>
+                Địa chỉ: 137 QL 1A, Linh Xuân, Thủ Đức, TP.Hồ Chí Minh <br />
+                ĐT: 028 3995 1703 - Fax: 028 3995 1702 <br />
+                Giấy chứng nhận đăng ký kinh doanh: 0300521758
+
+            </div>
+            <div class="col-20" style="width:30%;margin:25px;">
+                <h4>
+                    Đăng ký nhận bản tin FasWatch
+
+                </h4>
+                Đừng bỏ lỡ hàng ngàn sản phẩm và chương trình siêu hấp dẫn
+
+                <form>
+                    <div style="display:flex">
+                        <input type="email" placeholder="Địa chỉ email của bạn" />
+                        <input style="background-color:#FED101" type="button" value="Đăng ký" onclick="window.location.href = '../html/Product.html'" />
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="col-20" style="width:20%;margin:25px">
+                Phương thức thanh toán
+                <div class="row" style="display:flex">
+                    <img src="../img/visa.png" style="width:40px;margin:10px" />
+                    <img src="../img/mastercard.jpg" style="width:40px;margin:10px" />
+                </div>
+                <div class="row" style="display:flex">
+                    <img src="../img/thanhtoantienmat.svg" style="width:40px;margin:10px" />
+                    <img src="../img/internetBanking.svg" style="width:40px;margin:10px" />
+                </div>
+
+            </div>
+            <div class="col-20" style="width:20%;margin:25px">
+                Kết nối với chúng tôi
+                <div class="row" style="display:flex">
+                    <img src="../img/fkicon.png" onclick="window.location.href = 'https://www.facebook.com/tiennt1411/'" style="width:40px;margin:10px" />
+                    <img src="../img/1024px-Instagram_icon.png" style="width:40px;margin:10px" />
+                    <img src="../img/gmail.png" style="width:40px;margin:10px" />
+                </div>
+                Chứng nhận<br />
+                <img src="../img/chungnhan.png" style="width:100px;margin:10px" />
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/Product.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="../css/thanhtoan.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        
+    </script>
+
+
+</head>
+<body>
+
+    <p align="center" style="font-size:30pt">THANH TOÁN</p>
+    <hr />
+    <p align="center">
+        <a href="../html/home.html">Trang chủ</a>
+        <i class="fas fa-chevron-right"></i>
+        <a>Thanh toán</a>
+    </p>
+
+    <div class="row" id="row1">
+        <div class="col-75">
+            <form>
+                <div class="container">
+
+
+                    <div class="row">
+                        <div class="col-50">
+                            <h3>THÔNG TIN ĐẶT HÀNG</h3>
+                            <label for="name"><i class="fa fa-user"></i> Họ và tên (*)</label>
+                            <input required type="text" id="name" name="name" placeholder="Nguyễn Thị Tiên">
+                            <label for="phone"><i class="fa fa-phone"></i> SĐT (*)</label>
+                            <input required type="text" id="phone" name="phone" placeholder="(056)333333">
+                            <label for="email"><i class="fa fa-envelope"></i> Email (*)</label>
+                            <input required type="text" id="email" name="email" placeholder="tien@example.com">
+                            <label for="adr"><i class="fa fa-address-card-o"></i> Địa chỉ nhận hàng (*)</label>
+                            <input type="text" id="adr" name="address" placeholder="542 Chu Văn An">
+                            <label for="city"><i class="fa fa-institution"></i> Tỉnh/Thành</label>
+                            <input type="text" id="city" name="city" placeholder="TP.HCM">
+
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="state">Quận/Huyện</label>
+                                    <input type="text" id="state" name="state" placeholder="Thủ Đức">
+                                </div>
+                                <div class="col-50">
+                                    <label for="zip">Phường/Xã</label>
+                                    <input type="text" id="zip" name="zip" placeholder="Linh Xuân">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-50">
+                            <div class="container" style="background-color:white; margin-top:95px">
+                                <h4>ĐƠN HÀNG CỦA BẠN <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> </span></h4>
+
+
+                                <hr>
+                                <p>Total <span class="price" style="color:black"><b id="tongtien"></b></span></p>
+                            </div>
+                            <br/>
+                            <h2>Thanh toán</h2>
+                            <hr />
+                            <table id="tbthanhtoan">
+
+                                <tr>
+                                    <td colspan="2">
+                                        <label style="font-weight:bold; font-size:14pt">Chọn phương thức thanh toán:</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="radio" id="phuongthuc1" name="Phuongthuc" onclick="show1()"
+                                               value="Thanh toán bằng tài khoản Ngân hàng" />
+
+                                    </td>
+                                    <td>
+                                        <label>Thanh toán bằng tài khoản Ngân hàng</label>
+                                        <div id="show1" class="bonus" name="Phuongthuc">
+                                            Bạn ở HN và muốn tặng quà cho bạn mình ở HCM, bạn ở Huế và muốn tặng quà bạn mình ở Đà Nẵng, bạn muốn bên trong quà tặng của bạn có 1 tấm thiệp ghi những lời chúc của bạn tới người thân! Rất đơn giản, chúng tôi có giải pháp cho bạn …
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="radio" id="phuongthuc2" name="Phuongthuc" onclick="show2()"
+                                               value="Thanh toán bằng ví Momo" />
+
+                                    </td>
+                                    <td>
+                                        <label>Thanh toán bằng ví Momo</label>
+                                        <div id="show2" class="bonus">
+                                            Bạn muốn thanh toán tiền một cách nhanh chóng mà không cần cung cấp tài khoản ngân hàng, đây là một sự lựa chọn tiện lợi cho bạn...
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="radio" id="phuongthuc3" name="Phuongthuc" onclick="show3()"
+                                               value="Thanh toán sau khi nhận hàng" />
+
+                                    </td>
+                                    <td>
+                                        <label>Thanh toán sau khi nhận hàng</label>
+                                        <div id="show3" class="bonus">
+                                            Nếu bạn muốn kiểm tra sản phẩm trước khi nhận hàng thì đây là lựa chọn tối ưu. Các bạn chỉ phải trả tiền khi nhận hàng!
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <input type="button" id="xacnhan" value="Xác nhận" onclick="xacNhan()" class="btn">
+
+                </div>
+            </form>
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>
+                        Bạn cần phải điền các thông tin bắt buộc
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div style="background-color:black;color:white;width:100%">
+        <div style="background-color: black;width:90%;margin-left:6%; display:flex; color:white">
+            <div class="col-20" style="width:30%;margin:25px;">
+                <h4> © 2017 Cửa hàng Đồng hồ Thời Trang FasWatch</h4>
+                Địa chỉ: 137 QL 1A, Linh Xuân, Thủ Đức, TP.Hồ Chí Minh <br />
+                ĐT: 028 3995 1703 - Fax: 028 3995 1702 <br />
+                Giấy chứng nhận đăng ký kinh doanh: 0300521758
+
+            </div>
+            <div class="col-20" style="width:30%;margin:25px;">
+                <h4>
+                    Đăng ký nhận bản tin FasWatch
+
+                </h4>
+                Đừng bỏ lỡ hàng ngàn sản phẩm và chương trình siêu hấp dẫn
+
+                <form>
+                    <div style="display:flex">
+                        <input type="email" placeholder="Địa chỉ email của bạn" />
+                        <input style="background-color:#FED101" type="button" value="Đăng ký" onclick="window.location.href = '../html/Product.html'" />
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="col-20" style="width:20%;margin:25px">
+                Phương thức thanh toán
+                <div class="row" style="display:flex">
+                    <img src="../img/visa.png" style="width:40px;margin:10px" />
+                    <img src="../img/mastercard.jpg" style="width:40px;margin:10px" />
+                </div>
+                <div class="row" style="display:flex">
+                    <img src="../img/thanhtoantienmat.svg" style="width:40px;margin:10px" />
+                    <img src="../img/internetBanking.svg" style="width:40px;margin:10px" />
+                </div>
+
+            </div>
+            <div class="col-20" style="width:20%;margin:25px">
+                Kết nối với chúng tôi
+                <div class="row" style="display:flex">
+                    <img src="../img/fkicon.png" onclick="window.location.href = 'https://www.facebook.com/tiennt1411/'" style="width:40px;margin:10px" />
+                    <img src="../img/1024px-Instagram_icon.png" style="width:40px;margin:10px" />
+                    <img src="../img/gmail.png" style="width:40px;margin:10px" />
+                </div>
+                Chứng nhận<br />
+                <img src="../img/chungnhan.png" style="width:100px;margin:10px" />
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/thanhtoan.js"></script>
+</body>
+</html>

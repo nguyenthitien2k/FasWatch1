@@ -1,0 +1,41 @@
+﻿.main {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+    height: 100%;
+}
+body {
+    font-family: Arial;
+    font-size: 17px;
+    
+}
+
+
+
+
+
+.btn {
+    background-color: #FED101;
+    color: white;
+    padding: 12px;
+    margin: 5px 0;
+    border: none;
+    width: 150px;
+   
+    cursor: pointer;
+    font-size: 15px;
+}
+
+    .btn:hover {
+        background-color: red;
+    }
+
+a {
+    color: #2196F3;
+}
+
+hr {
+    border: 1px solid lightgrey;
+}
+

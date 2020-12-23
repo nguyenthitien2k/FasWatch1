@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/header.css" />
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="../js/detail.js"></script>
+    <style>
+        
+    </style>
+    
+   
+</head>
+<body>
+    <div>
+        <table id="tableheader">
+            <tr>
+                <td align="center">
+                    <img id="logo" src="../img/FasWatch.png" width="105" />
+                    <input id="content_search" type="text" placeholder="Tìm kiếm" onkeydown="if (event.keyCode == 13)
+                document.getElementById('btnSearch').onclick()" />
+                    
+                    <input id="btnSearch"  onclick="search()" type="button" value="Tìm" />
+
+                </td>
+                <td align="left">
+                    <img id="cart" src="../img/cart.png" onclick="openCart()" />
+                    <label id="slgio"  style="vertical-align:top;color:black;background:white;">0</label>
+                </td>
+            </tr>
+
+        </table>
+        <div id="container">
+            <ul>
+                <li><a href="../html/home.html" target="main">TRANG CHỦ</a></li>
+                <li><a href="../html/Product.html" target="main">SẢN PHẨM</a></li>
+                <li><a href="../html/aboutus.html" target="main">VỀ CHÚNG TÔI</a></li>
+                <li><a href="../html/Framset_Tuyendung.html" target="main">TUYỂN DỤNG</a></li>
+                <li><a href="../html/LienHe.html" target="main">LIÊN HỆ</a></li>
+            </ul>
+        </div>
+        <p>
+        </p>
+    </div>
+    <script>
+        var count = 0;
+        count = localStorage.getItem("count") || 0;
+        document.getElementById("slgio").innerText = count + "";
+        count = document.getElementById("slgio").innerText;
+       
+        function search() {
+
+            var content_search = document.getElementById("content_search").value;        
+
+            localStorage.setItem("search", content_search);
+            
+            window.open("../html/searchResult.html", "main");
+            
+        }
+        function openCart() {
+            if (count === 0)
+                alert("Bạn chưa có sản phẩm nào trong giỏ hàng")
+            else {
+                window.open("../html/GioHang.html", "main");
+            }
+        }
+        
+
+    </script>
+</body>
+</html>

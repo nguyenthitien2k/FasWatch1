@@ -1,0 +1,310 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="../css/detailproduct.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body id="bdDetailProduct" onload="loadDoc()" style="background-color: beige">
+    <div id="divmain">
+        <h1 class="h1" id="tenSp"></h1>
+        <table>
+            <tr>
+                <td colspan="3">
+                    <div class="slideshow-container">
+
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 3</div>
+                            <img id="hinh1" class="img1" height="500" width="500" />
+
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 3</div>
+                            <img id="h2" height="500" width="500" />
+
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 3</div>
+                            <img id="h3" height="500" width="500" />
+
+                        </div>
+
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+
+                    <!-- The dots/circles -->
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+
+                </td>
+                <td style="padding-left:50px" colspan="3">
+                    <table>
+                        <tr>
+                            <td>
+                                <h2>THÔNG TIN SẢN PHẨM</h2>
+                                <hr  />
+                            </td>
+                            <td rowspan="4" id="reason">
+                                <h2>Tại sao nên chọn chúng tôi?</h2>
+                                <hr />
+                                <p>
+                                    <i class="fas fa-certificate"></i>
+                                    Hoàn Lại Tiền Gấp 10 Lần Nếu Phát Hiện Hàng Giả - Hàng Nhái.
+                                </p>
+                                <p>
+                                    <i class="fab fa-500px"></i>
+                                    Tăng Thêm Thời Gian Bảo Hành Lên Đến 5 Năm - Xem Thêm.
+                                </p>
+                                <p>
+                                    <i class="fas fa-undo-alt"></i>
+                                    Sai Kích Cỡ? Không Ưng Ý? Đổi Hàng Trong 7 Ngày - Xem Thêm.
+                                </p>
+                                <p>
+                                    <i class="far fa-lightbulb"></i>
+                                    Thay Pin Miễn Phí Suốt Đời - Không Còn Lo Hết Pin Nữa.
+                                </p>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="Imgsao">
+                                <img src="../img/sao.PNG" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p id="maSp" style="font-weight:bold; font-size:20px">
+                                    Mã Số Sản Phẩm:
+                                </p>
+
+                                <p id="gia" style="font-weight:bold;font-size:30px">
+
+                                </p>
+                                <p style="text-align:justify;padding-right:30px" id="moTa">
+                                </p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div id="addCart">
+                                    <i class="fas fa-cart-plus"></i>
+                                    THÊM VÀO GIỎ
+                                </div>
+
+                                <br />
+                                <button id="muangay">MUA NGAY</button>
+                            </td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><img id="hinh1nho" class="img" /></td>
+                <td><img id="hinh2" class="img" /></td>
+                <td><img id="hinh3" class="img" /></td>
+
+            </tr>
+
+        </table>
+
+
+        <br />
+        <br />
+        <table class="table">
+            <tr>
+                <td><hr id="hrmau" /></td>
+                <td style="text-align:center;">
+                    <span style="color: black;font-weight: bold;font-size: 25px;"> MÔ TẢ SẢN PHẨM </span>
+                </td>
+                <td><hr id="hrmau" /></td>
+            </tr>
+        </table>
+
+        <br />
+        <br />
+
+        <table class="tablemota">
+            <tr>
+                <td colspan="2">
+                    <p class="pmota">
+                        Lấy cảm hứng từ nét đẹp hoài cổ ở các tạp chí thời trang thuộc những năm 1920-1950, những mẫu thiết kế đồng hồ tinh tế đầy nét hoài cổ đã được người dùng đón nhận. Không phải là xưa cũ, giá trị mà Doxa chọn để tạo dựng thương hiệu cho mình chính là sự vững chắc
+                    </p>
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>Thương Hiệu:</td>
+                <td id="thuongHieu"></td>
+            </tr>
+            <tr>
+                <td>Xuất xứ:</td>
+                <td id="xuatXu"></td>
+            </tr>
+            <tr>
+                <td>Giới tính: </td>
+                <td id="gioiTinh"></td>
+            </tr>
+            <tr>
+                <td>Kính: </td>
+                <td id="kinh"></td>
+            </tr>
+            <tr>
+                <td>Máy: </td>
+                <td id="may"></td>
+            </tr>
+            <tr>
+                <td>Bảo Hành Quốc Tế:</td>
+                <td>1 năm</td>
+            </tr>
+            <tr>
+                <td>Bảo Hành Tại FasWatch: </td>
+                <td id="baoHanh"></td>
+            </tr>
+            <tr>
+                <td>Đường Kính Mặt Số: </td>
+                <td id="dkMatSo"></td>
+            </tr>
+            <tr>
+                <td>Bề Dày Mặt Số: </td>
+                <td id="bdMatSo"></td>
+            </tr>
+            <tr>
+                <td>Niềng: </td>
+                <td id="nieng"></td>
+            </tr>
+            <tr>
+                <td>Dây Đeo:  </td>
+                <td id="dayDeo"></td>
+            </tr>
+            <tr>
+                <td>Màu Mặt Số:</td>
+                <td id="mauMatSo"></td>
+            </tr>
+            <tr>
+                <td>Chống Nước: </td>
+                <td id="chongNuoc"></td>
+            </tr>
+
+        </table>
+    
+        <div class="baohanh"> 
+            <h3 style="vertical-align:middle">CHẾ ĐỘ BẢO HÀNH VÀ HẬU MÃI</h3>
+            <ul>
+                Tất cả các đồng hồ khi bán ra đều kèm theo 2 phiếu bảo hành:
+                <li>1 Phiếu Bảo Hành (hoặc Thẻ Bảo Hành/Sổ Bảo Hành) của hãng có giá trị bảo hành Quốc tế (Thời gian bảo hành tùy theo quy định của từng hãng).</li>
+                <li>1 Phiếu Bảo Hành của Hải Triều (Sử dụng để được thay pin miễn phí vĩnh viễn & Hưởng chế độ bảo hành tăng thêm từ 1-4 năm của Hải Triều).</li>
+            </ul>
+            <ul>
+                Ví dụ: Đồng Hồ Citizen có chế độ bảo hành chính hãng: máy = 12 tháng, Pin = 12 tháng.
+                <li>Khi mua tại Hải Triều, Khách hàng sẽ được tặng thêm thời gian bảo hành từ 4 năm về máy. Pin = Vĩnh Viễn.</li>
+                <li>Tổng cộng: Khi mua tại Hải Triều, đồng hồ Citizen sẽ được bảo hành máy = 05 năm, Pin = Vĩnh Viễn.</li>
+            </ul>
+            <ul>
+                Lưu ý:
+                <li>Đối với sản phẩm còn trong thời gian bảo hành Quốc Tế: Quý khách có thể đem tới Hải Triều hoặc bất kỳ nhà trung tâm bảo hành nào của hãng được ghi trên phiếu để yêu cầu được kiểm tra đồng hồ.</li>
+                <li>Đối với sản phẩm hết thời gian bảo hành Quốc Tế nhưng vẫn trong thời gian bảo hành tại Hải Triều: Quý khách đem đồng hồ kèm Phiếu Bảo Hành của Hải Triều tới bất kỳ chi nhánh nào của Hải Triều để được hướng dẫn và kiểm tra đồng hồ.</li>
+
+            </ul>
+            <ul>
+                Điều Kiện Được Bảo Hành
+                <li>Bảo hành chỉ có giá trị khi đồng hồ có Phiếu bảo hành của hãng & Phiếu bảo hành của Hải Triều đi kèm, điền chính xác, đầy đủ các thông tin.</li>
+                <li>Phiếu bảo hành phải còn nguyên vẹn, không rách, chấp vá, hoen ố, mờ nhạt.</li>
+                <li>Chỉ bảo hành thay thế mới cho những linh kiện, phụ tùng bị hỏng – không thay thế bằng một chiếc đồng hồ khác.</li>
+            </ul>
+            <ul>
+                Điều Kiện Không Được Bảo Hành
+                <li>Đồng hồ không có Phiếu bảo hành của hãng và Phiếu bảo hành của Hải Triều đi kèm.</li>
+                <li>Hỏng hóc do hậu quả gián tiếp của việc sử dụng sai hướng dẫn của hãng có kèm theo đồng hồ.</li>
+                <li>Tự ý thay đổi máy móc bên trong, mở ra can thiệp sửa chữa trong thời gian còn bảo hành – Tại những nơi không phải là trung tâm của hãng</li>
+                <li>Các loại dây đeo, khoá, vỏ, màu xi, mặt số, mặt kiếng bị hỏng hóc, vỡ do sử dụng không đúng, tai nạn, lão hóa tự nhiên, va đập, … trong quá trình sử dụng.</li>
+            </ul>
+        </div>
+               
+
+        <br />
+        <br />
+        <table class="table">
+            <tr>
+                <td><hr id="hrmau" /></td>
+                <td style="text-align:center">
+                    <span style="color:black;font-weight: bold;font-size: 25px;"> SẢN PHẨM LIÊN QUAN </span>
+                </td>
+                <td><hr id="hrmau" /></td>
+            </tr>
+        </table>
+        <br />
+        <br />
+
+        <div id="related">
+        </div>
+        <p align="center">
+            <a class="showmore" href="../html/Product.html">Xem thêm</a>
+        </p>
+    </div>
+
+    <div style="background-color:black;color:white;width:100%;margin-top:20px">
+        <div style="background-color: black;width:90%;margin-left:6%; display:flex; color:white">
+            <div class="col-20" style="width:30%;margin:25px;">
+                <h4> © 2017 Cửa hàng Đồng hồ Thời Trang FasWatch</h4>
+                Địa chỉ: 137 QL 1A, Linh Xuân, Thủ Đức, TP.Hồ Chí Minh <br />
+                ĐT: 028 3995 1703 - Fax: 028 3995 1702 <br />
+                Giấy chứng nhận đăng ký kinh doanh: 0300521758
+
+            </div>
+            <div class="col-20" style="width:30%;margin:25px;">
+                <h4>
+                    Đăng ký nhận bản tin FasWatch
+
+                </h4>
+                Đừng bỏ lỡ hàng ngàn sản phẩm và chương trình siêu hấp dẫn
+
+                <form>
+                    <div style="display:flex">
+                        <input type="email" placeholder="Địa chỉ email của bạn" />
+                        <input style="background-color:#FED101" type="button" value="Đăng ký" onclick="window.location.href = '../html/Product.html'" />
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="col-20" style="width:20%;margin:25px">
+                Phương thức thanh toán
+                <div class="row" style="display:flex">
+                    <img src="../img/visa.png" style="width:40px;margin:10px" />
+                    <img src="../img/mastercard.jpg" style="width:40px;margin:10px" />
+                </div>
+                <div class="row" style="display:flex">
+                    <img src="../img/thanhtoantienmat.svg" style="width:40px;margin:10px" />
+                    <img src="../img/internetBanking.svg" style="width:40px;margin:10px" />
+                </div>
+
+            </div>
+            <div class="col-20" style="width:20%;margin:25px">
+                Kết nối với chúng tôi
+                <div class="row" style="display:flex">
+                    <img src="../img/fkicon.png" onclick="window.location.href = 'https://www.facebook.com/tiennt1411/'" style="width:40px;margin:10px" />
+                    <img src="../img/1024px-Instagram_icon.png" style="width:40px;margin:10px" />
+                    <img src="../img/gmail.png" style="width:40px;margin:10px" />
+                </div>
+                Chứng nhận<br />
+                <img src="../img/chungnhan.png" style="width:100px;margin:10px" />
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/detail.js">
+    </script>
+</body>
+</html> 

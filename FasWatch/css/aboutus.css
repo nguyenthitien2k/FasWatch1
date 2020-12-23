@@ -1,0 +1,55 @@
+﻿
+.right  {
+    color: gray;
+    width: 500px;
+    text-align:left;
+}
+.header
+{
+    color:black;
+    font-size: 32px;
+    
+    text-align:center;
+   
+}
+body{
+    font-family:Arial
+}
+#bd h2
+{
+    
+    text-align:center;
+
+}
+#bd {
+    margin-left:50px;
+    margin-right:50px;
+    text-align:justify;
+    font-size: 14px;
+    color:black;
+    text-align:justify;
+
+}
+#bd img
+{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:800px;
+    height: 500px;
+}
+h4
+{
+    text-align:center;
+    font-style:italic;
+    font-weight:bold;
+}
+#footer
+{
+    text-align:center;
+    color:#FED101;
+    font-size:40px;
+    
+    font-weight:bold;
+    
+}
